@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.actionbarsherlock</groupId>
     <artifactId>parent</artifactId>
-    <version>4.4.0</version>
+    <version>4.4.0-AB</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -23,6 +23,7 @@
     <dependency>
       <groupId>com.google.android</groupId>
       <artifactId>support-v4</artifactId>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -38,6 +39,8 @@
     <dependency>
       <groupId>org.robolectric</groupId>
       <artifactId>robolectric</artifactId>
+	<classifier>jar-with-dependencies</classifier>
+        <version>${robolectric.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -97,10 +100,12 @@
                   <type>jar</type>
                   <file>${project.build.directory}/${project.build.finalName}.jar</file>
                 </artifact>
+<!--
                 <artifact>
                   <type>aar</type>
                   <file>${project.basedir}/build/libs/${project.artifactId}-${gradle.version}.aar</file>
                 </artifact>
+-->
               </artifacts>
             </configuration>
           </execution>

@@ -12,18 +12,28 @@
   <groupId>com.actionbarsherlock</groupId>
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
-  <version>4.4.0</version>
+  <version>4.4.0-AB</version>
 
   <name>ActionBarSherlock (Parent)</name>
   <description>Android library for implementing the action bar design pattern using the backported sources of Ice Cream Sandwich.</description>
   <url>http://actionbarsherlock.com</url>
   <inceptionYear>2011</inceptionYear>
 
+  <distributionManagement>
+    <repository>
+      <name>thirdparty</name>
+      <id>ab-maven-nexus-repo</id>
+      <url>${repo.url}</url>
+    </repository>
+  </distributionManagement>
+
   <modules>
     <module>actionbarsherlock</module>
+<!--
     <module>actionbarsherlock-fest</module>
     <module>actionbarsherlock-i18n</module>
     <module>actionbarsherlock-samples</module>
+-->
   </modules>
 
   <scm>
@@ -220,6 +230,7 @@
         </executions>
       </plugin>
 
+<!--
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
@@ -241,6 +252,7 @@
           </execution>
         </executions>
       </plugin>
+-->
     </plugins>
   </build>
 </project>
